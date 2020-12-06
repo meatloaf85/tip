@@ -20,9 +20,7 @@ The following **optional** features are implemented:
 * [ ] Using locale-specific currency and currency thousands separators.
 * [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
-The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
@@ -35,6 +33,9 @@ Here's a walkthrough of implemented user stories:
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+* I first tried implementing a slider to adjust the tip/total. It would only update after entering in a new value for "bill amount". My intention for that feature was for it to continously update while the user was moving the slider up and down.
+* I also tried to implement the increment +/- feature, so a user could add a tip anywhere from 1% to 100%. 
 
 ## License
 
