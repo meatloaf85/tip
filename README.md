@@ -4,7 +4,7 @@
 
 Submitted by: **Jarrett**
 
-Time spent: **1** hours spent in total
+Time spent: **3** hours spent in total
 
 ## User Stories
 
@@ -20,25 +20,26 @@ The following **optional** features are implemented:
 * [ ] Using locale-specific currency and currency thousands separators.
 * [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
-The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video walkthrough](ezgif.com-gif-maker.gif) 
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
+* I first tried implementing a slider to adjust the tip/total. It would only update after entering in a new value for "bill amount". My intention for that feature was for it to continously update while the user was moving the slider up and down.
+* I also tried to implement the increment +/- feature, so a user could add a tip anywhere from 1% to 100%. 
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2020 Jarrett
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
