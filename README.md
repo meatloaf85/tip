@@ -2,7 +2,7 @@
 
 **Big tipper** is a tip calculator application for iOS.
 
-Submitted by: **Jarrett**
+Submitted by: **Jarrett G**
 
 Time spent: **3** hours spent in total
 
@@ -34,8 +34,7 @@ Here's a walkthrough of implemented user stories:
 
 Describe any challenges encountered while building the app.
 
-* I first tried implementing a slider to adjust the tip/total. It would only update after entering in a new value for "bill amount". My intention for that feature was for it to continously update while the user was moving the slider up and down.
-* I also tried to implement the increment +/- feature, so a user could add a tip anywhere from 1% to 100%. 
+
 
 ## License
 
