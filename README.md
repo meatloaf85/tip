@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video walkthrough](ezgif.com-gif-maker (1).gif) 
+![Video walkthrough](gif.gif) 
 
 ## Additional Features
 
