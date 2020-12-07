@@ -1,6 +1,6 @@
 ## Pre-work - *Tip calculator*
 
-**Tippy** is a tip calculator application for iOS.
+**Big tipper** is a tip calculator application for iOS.
 
 Submitted by: **Jarrett**
 
