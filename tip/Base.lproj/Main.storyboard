@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -66,6 +66,7 @@
                                 <rect key="frame" x="20" y="319" width="359" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
+                                    <segment title="0%"/>
                                     <segment title="15%"/>
                                     <segment title="20%"/>
                                     <segment title="25%"/>
@@ -74,6 +75,28 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="8ao-qy-g0V"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="thM-w0-JGz">
+                                <rect key="frame" x="18" y="380" width="351" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="L6e-PD-H4m"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iae-13-w0a" userLabel="Settings">
+                                <rect key="frame" x="310" y="44" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="I1h-l7-Sgi" kind="show" id="Wc2-XQ-iJ9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other amount (0% to 100%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hev-KT-U4i">
+                                <rect key="frame" x="92" y="358" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,6 +107,7 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="Zzk-be-aaQ" id="FkF-8n-m3q"/>
+                        <outlet property="slideAmount" destination="thM-w0-JGz" id="fvQ-06-w6J"/>
                         <outlet property="tipControl" destination="F3M-2L-2UR" id="5LP-tf-FtC"/>
                         <outlet property="tipPercentageLabel" destination="hPZ-6b-e4i" id="o0d-Vs-hoG"/>
                         <outlet property="totalLabel" destination="5vk-f2-6fg" id="cdf-hX-89n"/>
@@ -97,6 +121,38 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </scene>
+        <!--Settings screen-->
+        <scene sceneID="Hk5-z1-cKj">
+            <objects>
+                <viewController id="I1h-l7-Sgi" userLabel="Settings screen" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1te-Vr-nI9" userLabel="Settings view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTt-Or-Trx">
+                                <rect key="frame" x="63" y="75" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Dark mode" translatesAutoresizingMaskIntoConstraints="NO" id="a2W-cR-YfA" userLabel="Dark mode">
+                                <rect key="frame" x="248" y="70" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="darkMode:" destination="2G2-En-4Wu" eventType="valueChanged" id="AGs-E9-wu4"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KHe-08-dxF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f0L-fv-lPe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99G-un-CoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2G2-En-4Wu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="-77"/>
         </scene>
     </scenes>
     <resources>
