@@ -36,6 +36,8 @@ Here's a walkthrough of implemented user stories:
 
 Describe any challenges encountered while building the app.
 
+* I originally had a second view setup so when you clicked on the 'Settings' button, it would take you to another view to turn on/off dark mode. It was working as intended when I originally implemented it, but then the second view became see-through. 
+* Dark mode was something I wanted to add as a feature, but had trouble implementing it.
 
 
 ## License
